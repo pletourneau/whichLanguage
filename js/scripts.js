@@ -7,16 +7,33 @@ function handleSubmission(event) {
   const q3 = document.querySelector("input[name='q3']:checked").value;
   const q4 = document.querySelector("input[name='q4']:checked").value;
   const q5 = document.querySelector("input[name='q5']:checked").value;
-  // let abilities = document.querySelectorAll("input[name='ability']:checked");
   const values = [q1, q2, q3, q4, q5];
+  let swiftCount = 0;
+  let jsCount = 0;
+  let cSharpCount = 0;
+
+  for (let i = 0; i < values.length; i++) {
+    if (values[i] === "swift") {
+      swiftCount ++;
+    } else if (values[i] === "js") {
+      jsCount ++;
+    } else if (values[i] === "c#") {
+      cSharpCount ++;
+    }
+  }
+  
+  console.log(swiftCount);
+  console.log(jsCount);
+  console.log(cSharpCount);
+
 
   
   
-  console.log(values);
+
   
 
   
-  // let result = operator + "with" + values;
+  let result = q1 + "with" + q2;
   document.getElementById("output").innerText = result;
 }
 
