@@ -36,10 +36,17 @@ function handleSubmission(event) {
   }
   document.querySelector(".hidden").removeAttribute("class");
   document.getElementById("output").innerText = result;
+  document.getElementById("form").reset();
+  swiftCount.valueOf = "";
+  cSharpCount.valueOf = "";
+  jsCount.valueOf = "";
 }
 
 window.addEventListener("load", function() {
   const form = document.getElementById("form");
   form.addEventListener("submit", handleSubmission); 
 });
+
+
+
 
