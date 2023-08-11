@@ -1,5 +1,6 @@
 function handleSubmission(event) {
   event.preventDefault();
+  document.getElementById("output").setAttribute("class", "hidden");
 
   const q1 = document.querySelector("input[name='q1']:checked").value;
   const q2 = document.querySelector("input[name='q2']:checked").value;
@@ -37,9 +38,7 @@ function handleSubmission(event) {
   document.querySelector(".hidden").removeAttribute("class");
   document.getElementById("output").innerText = result;
   document.getElementById("form").reset();
-  swiftCount.valueOf = "";
-  cSharpCount.valueOf = "";
-  jsCount.valueOf = "";
+  console.log(values);
 }
 
 window.addEventListener("load", function() {

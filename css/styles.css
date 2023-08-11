@@ -4,9 +4,14 @@
 
 h2 {
   font-size: 1.3em;
+  font-weight: 700;
 }
 
 h1 {
   font-size: 1.6em;
   text-align: center;
+}
+
+#resultArea {
+  background-color: bisque;
 }
