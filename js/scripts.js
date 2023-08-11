@@ -8,7 +8,12 @@ function handleSubmission(event) {
   const q4 = document.querySelector("input[name='q4']:checked").value;
   const q5 = document.querySelector("input[name='q5']:checked").value;
   // let abilities = document.querySelectorAll("input[name='ability']:checked");
-  console.log(operator);
+  const values = [q1, q2, q3, q4, q5];
+
+  
+  
+  console.log(values);
+  
 
   
   // let result = operator + "with" + values;
