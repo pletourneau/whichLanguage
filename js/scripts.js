@@ -38,12 +38,13 @@ function handleSubmission(event) {
   }
 
 
-  
+  document.querySelector(".hidden").removeAttribute("class");
   document.getElementById("output").innerText = result;
 }
 
 window.addEventListener("load", function() {
-  const form = document.getElementById("char");
+  const form = document.getElementById("form");
   form.addEventListener("submit", handleSubmission);
+
   
 });
