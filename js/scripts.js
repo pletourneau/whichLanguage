@@ -1,7 +1,6 @@
 function handleSubmission(event) {
   event.preventDefault();
 
-
   const q1 = document.querySelector("input[name='q1']:checked").value;
   const q2 = document.querySelector("input[name='q2']:checked").value;
   const q3 = document.querySelector("input[name='q3']:checked").value;
@@ -12,7 +11,6 @@ function handleSubmission(event) {
   let jsCount = 0;
   let cSharpCount = 0;
   
-
   for (let i = 0; i < values.length; i++) {
     if (values[i] === "swift") {
       swiftCount ++;
@@ -36,15 +34,12 @@ function handleSubmission(event) {
   } else if (cSharpCount === swiftCount) {
     result = "You should learn C# first. Your C# interest score tied with swift, but turtlenecks havent been cool since the beatniks";
   }
-
-
   document.querySelector(".hidden").removeAttribute("class");
   document.getElementById("output").innerText = result;
 }
 
 window.addEventListener("load", function() {
   const form = document.getElementById("form");
-  form.addEventListener("submit", handleSubmission);
-
-  
+  form.addEventListener("submit", handleSubmission); 
 });
+
