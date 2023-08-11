@@ -38,7 +38,6 @@ function handleSubmission(event) {
   document.querySelector(".hidden").removeAttribute("class");
   document.getElementById("output").innerText = result;
   document.getElementById("form").reset();
-  console.log(values);
 }
 
 window.addEventListener("load", function() {
