@@ -11,6 +11,7 @@ function handleSubmission(event) {
   let swiftCount = 0;
   let jsCount = 0;
   let cSharpCount = 0;
+  
 
   for (let i = 0; i < values.length; i++) {
     if (values[i] === "swift") {
@@ -22,18 +23,22 @@ function handleSubmission(event) {
     }
   }
   
-  console.log(swiftCount);
-  console.log(jsCount);
-  console.log(cSharpCount);
+  if ((swiftCount > jsCount) && (swiftCount > cSharpCount)) {
+    result = "Your love of all things iOS trumps logic, but I understand. Learn the swift language first and buy a black turtleneck.";
+  } else if ((jsCount > swiftCount) && (jsCount > cSharpCount)) {
+    result = "Your interests lie with coffee, or coding. Either way, learn JavaScript first.";
+  } else if ((cSharpCount > swiftCount) && (cSharpCount > jsCount)) {
+    result = "You are famous for uttering 'Cs get degrees'. Start with learning coding with C# and see if 'Cs get jobs' Suerte amigo.";
+  } else if (jsCount === swiftCount) {
+    result = "You should learn JavaScript first. Your JS interest score tied with swift, but coffee always wins";
+  } else if (jsCount === cSharpCount) {
+    result = "You should learn JavaScript first. Your JS interest score tied with C#, but coffee always wins";
+  } else if (cSharpCount === swiftCount) {
+    result = "You should learn C# first. Your C# interest score tied with swift, but turtlenecks havent been cool since the beatniks";
+  }
 
 
   
-  
-
-  
-
-  
-  let result = q1 + "with" + q2;
   document.getElementById("output").innerText = result;
 }
 
